@@ -1,0 +1,24 @@
+{
+  "name": "02assign",
+  "version": "1.0.0",
+  "description": "2nd Udemy assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lightjedi5/cse341/tree/master/Udemy"
+  },
+  "keywords": [
+    "udemy",
+    "node"
+  ],
+  "author": "Tzitzimitl",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
