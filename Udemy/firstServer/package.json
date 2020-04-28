@@ -1,0 +1,19 @@
+{
+  "name": "firstserver",
+  "version": "1.0.0",
+  "description": "Udemy project",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "keywords": [
+    "hello"
+  ],
+  "author": "Jeremias Platero",
+  "license": "ISC"
+}
