@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/prove02.css" />
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center" style="padding: 40px 0px 40px;">
+  <div class="container">
+    <h1><%= title %></h1>
+  </div>
+</div>
+<div class="container">
+    <form class="product-form" action="/prove02/add-product" method="POST">
+        <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+            <label for="summary">Summary</label>
+            <input type="text" name="summary" id="summary">
+        </div>
+        <button class="btn" type="submit">Add Product</button>
+    </form>
+</div>
+<main>
+    <% if (b.length > 0) { %>
+    <div class="grid">
+    <% for (let product of b) { %>
+            <article class="card product-item">
+                <header class="card__header">
+                    <h1 class="product__title"><%= product.title %></h1>
+                </header>
+                <div class="card__image">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png" alt="A Book" style="height: 175px; width: auto;">
+                </div>
+                <div class="card__content">
+                    <h2 class="product__price">$19.99</h2>
+                    <p class="product__description"><%= product.summary %></p>
+                </div>
+                <div class="card__actions">
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </article>
+            <% } %>
+    </div>
+    <% }  else { %>
+        <h1>No Product Found</h1>
+        <% } %>
+</main>
+
+
+</body>
+</html>
