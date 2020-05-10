@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../includes/header.ejs %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/prove02.css" />
+</head>
+<body>
+    <% include ../includes/nav.ejs %>
+        <main class="centered">
+            <h1><%= product.title %></h1>
+            <hr>
+            <div>
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                <p><%= product.description %></p>
+                <input type="hidden" name="productId" value="<%= product.id %>">
+            </div>
+        </main>
+    
+</body>
+</html>

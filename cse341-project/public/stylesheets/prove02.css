@@ -31,7 +31,8 @@ main {
   }
   
   .card__image img {
-    width: 100%;
+    width: 50rem;
+    height: auto;
   }
   
   .card__actions {
@@ -73,4 +74,12 @@ main {
 
 .form-control input:focus {
     outline-color: #00695c;
+}
+
+.centered {
+  text-align: center;
+}
+
+img {
+  width: 50rem;
 }
