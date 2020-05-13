@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+//functtion that gets the file path where data is stored
 const p = path.join(
   path.dirname(process.mainModule.filename),
   'data',
