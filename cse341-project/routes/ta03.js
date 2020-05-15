@@ -1,7 +1,7 @@
 //TA03 PLACEHOLDER
 const express = require('express');
 const fs = require('fs')
-const request = require('request')
+//const request = require('request')
 const router = express.Router();
 
 const URL = 'https://byui-cse.github.io/cse341-course/lesson03/items.json'

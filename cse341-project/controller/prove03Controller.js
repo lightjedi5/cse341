@@ -1,5 +1,5 @@
-const Product = require('../model/prove03');
-
+const Product = require('../Model/prove03');
+//there was a typo that broke the above line
 exports.getAddProduct = (req, res, next) => {
     res.render('pages/prove03', {
       pageTitle: 'Add Product',
