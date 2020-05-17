@@ -16,7 +16,11 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 5000 // So we can run on heroku || (OR) localhost:5000
 const cors = require('cors') // Place this with other requires (like 'path' and 'express')
+const mongoose = require('mongoose')
 
+//custom modules
+const mongoConnect = require('./util/database') //util that connects to mongo database
+const mongooseConnect = require('./util/mongoose')
 const app = express();
 
 // Route setup. You can implement more in the future!
@@ -50,29 +54,18 @@ app.use(express.static(path.join(__dirname, 'public')))
      // 404 page
      res.render('pages/404', {title: '404 - Page Not Found', path: req.url})
    })
-   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+   //.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-   //mongDB
+
 const corsOptions = {
   origin: "https://thawing-crag-55540.herokuapp.com/",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
 
-const options = {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  family: 4
-};
+//connects to mongo database with moongoose by using a callback function. code is in ./util/mongoose.js
+mongooseConnect((client => {
+  //console.log(client)
+  app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+}))
 
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://greyjedi:hTIYjbE72IiXpFAh@cluster0-amypx.mongodb.net/test?retryWrites=true&w=majority"
-mongoose.connect(
-  MONGODB_URL, options
-).then(result => {
-   // This should be your user handling code implement following the course videos
-  app.listen(PORT);
-}).catch(err => {
-  console.log(err);
-});
