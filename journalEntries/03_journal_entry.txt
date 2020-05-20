@@ -1,3 +1,0 @@
-Journal 03
-==================
-Alot of information to learn. It is starting to seem overwhelming handling the file structure. Honestly it feels like I need a bigger screen as well since I have will typically have about 4-5 files and be switching between them and so my little laptop screen slows me down. Other than that I appreciated the meeting we had as it made me more confident about my understanding of MVC and especially after converting the site you provided to MVC I feel more confident in my abilities. Discovery I made was that with webpages having a routes page that then connects to the MVC is quite useful. Had I not thought to do that may have taken longer to get the project running

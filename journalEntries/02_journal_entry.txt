@@ -1,5 +1,0 @@
-02 Entry
-=====================
-I really am enjoying node js and templating engines since it answered a person question of how to get information to dynamically display on webpages. It is also nice because it feels more like programming than doing front-end. The only thing I do not like as much is the fractured nature of it (which is nice because it leads to modularity) since it means that one has to keep track of where things are mentally. Otherwise, one spends time figuring where things are and what has what. I actually spent a bit of time trying to figure out where things should go and what is where (made me wish I had 3 screens lol).
-
-Also I forgot about the joy that comes when successfully program something after having to do some troubleshooing!
