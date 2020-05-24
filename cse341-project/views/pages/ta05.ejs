@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+  <% if (style == 0) { %>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  <% } else { %>
+    <link rel="stylesheet" href="/stylesheets/ta05.css">
+  <% } %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>This is the placeholder for Team Activity 05</p>
+  </div>
+</div>
+
+<div class="container">
+    <form id="styling_form" action="../ta05/change-style" method="POST">
+        <select id="css" name="styling_choice">
+            <option value="0">Blue</option>
+            <option value="1">Green</option>
+        </select>
+        <button type="submit">SUBMIT</button>
+    </form>
+    
+    <input type="number" readonly name="counter-value" value="<%= counter %>">
+    
+    <form id="increment-form" action="../ta05/increment" method="POST">
+        <input type="number" readonly name="counter-value" hidden value="<%= counter %>">
+        <button type="submit">INCREMENT</button>
+    </form>
+    
+    <form id="decrement-form" action="../ta05/decrement" method="POST">
+        <input type="number" readonly name="counter-value" hidden value="<%= counter %>">
+        <button type="submit">DECREMENT</button>
+    </form>
+    
+    <form id="reset-form" action="../ta05/reset" method="GET">
+        <button type="submit">RESET</button>
+    </form>
+    
+</div>
+
+
+</body>
+</html>

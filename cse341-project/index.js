@@ -28,8 +28,10 @@ const ta01Routes = require('./routes/ta01');
 const ta02Routes = require('./routes/ta02');
 const ta03Routes = require('./routes/ta03'); 
 const ta04Routes = require('./routes/ta04');
+const ta05Routes = require('./routes/ta05')
 const prove02Routes = require('./routes/prove02')
-const prove03 = require('./routes/prove03') 
+const prove03 = require('./routes/prove03')
+const prove05Routes = require('./routes/prove05') 
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
@@ -44,8 +46,10 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use('/ta02', ta02Routes) 
    .use('/ta03', ta03Routes) 
    .use('/ta04', ta04Routes)
+   .use('/ta05', ta05Routes)
    .use('/prove02', prove02Routes)
    .use('/prove03', prove03)
+   .use('/prove05', prove05Routes)
    .get('/', (req, res, next) => {
      // This is the primary index, always handled last. 
      res.render('pages/index', {title: 'Welcome to my CSE341 repo', path: '/'});
@@ -61,7 +65,7 @@ const corsOptions = {
   origin: "https://thawing-crag-55540.herokuapp.com/",
   optionsSuccessStatus: 200
 };
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); //setting up heroku
 
 //connects to mongo database with moongoose by using a callback function. code is in ./util/mongoose.js
 mongooseConnect((client => {

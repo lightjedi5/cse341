@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+//first part looks for a .env file
 const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://greyjedi:hTIYjbE72IiXpFAh@cluster0-amypx.mongodb.net/test?retryWrites=true&w=majority"
 
 const options = {
