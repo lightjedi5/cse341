@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const User = require('../Model/ta05');
+//const User = require('../Model/ta05');
 
 exports.postSignup = (req, res, next) => {
     const email = req.body.email;

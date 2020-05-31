@@ -1,4 +1,4 @@
-const Product = require('../Model/ta05');
+//const Product = require('../Model/ta05');
 
 exports.decrement = (req, res, next) => {
     req.session.counter -= 1;
