@@ -1,0 +1,30 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "web browser tic tac game that has bot the player can play against",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightjedi5/cse341.git"
+  },
+  "keywords": [
+    "machine-learning",
+    "tic-tac-toe",
+    "game"
+  ],
+  "author": "Jeremias Platero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lightjedi5/cse341/issues"
+  },
+  "homepage": "https://github.com/lightjedi5/cse341#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20",
+    "nodemon": "^2.0.4"
+  }
+}

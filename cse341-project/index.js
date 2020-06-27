@@ -30,10 +30,12 @@ const ta03Routes = require('./routes/ta03');
 const ta04Routes = require('./routes/ta04');
 const ta05Routes = require('./routes/ta05')
 const ta06Routes = require('./routes/ta06')
+const ta09Routes = require('./routes/ta09')
+const ta10Routes = require('./routes/ta10') 
 const prove02Routes = require('./routes/prove02')
 const prove03 = require('./routes/prove03')
 const prove05Routes = require('./routes/prove05')
-const prove06Routes = require('./routes/prove06') 
+const prove06Routes = require('./routes/prove06')
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
@@ -46,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use(bodyParser({extended: false})) // For parsing the body of a POST
    .use('/ta01', ta01Routes)
    .use('/ta02', ta02Routes) 
-   .use('/ta03', ta03Routes) 
+   //.use('/ta03', ta03Routes) 
    .use('/ta04', ta04Routes)
    .use('/ta05', ta05Routes)
    .use('/ta06', ta06Routes)
@@ -54,6 +56,8 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use('/prove03', prove03)
    .use('/prove05', prove05Routes)
    .use('/prove06', prove06Routes)
+   .use('/ta09', ta09Routes)
+   .use('/ta10', ta10Routes)
    .get('/', (req, res, next) => {
      // This is the primary index, always handled last. 
      res.render('pages/index', {title: 'Welcome to my CSE341 repo', path: '/'});

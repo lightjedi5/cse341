@@ -1,4 +1,5 @@
 const Player = require('../models/users')
+const router = require('../../Udemy/CourseWork/routes/admin')
 
 getLogin = (req, res, next) => {
 
@@ -35,3 +36,5 @@ getNewPassword = (req, res, next) => {
 postNewPassword = (req, res, next) => {
     
 }
+
+module.exports = router

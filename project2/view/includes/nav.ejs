@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="/" style="padding: 0 2rem; margin: 0"><img class="logo" src="/images/BYUI-logo.png" alt="BYU Idaho logo"></a></li>
+        <li class="<%= path === '/' ? 'active' : ''%>">
+          <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <li class="">
+            <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+        </li>
+        <li class="">
+            <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+        </li>
+        <li class="">
+            <form action="/logout" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit">Logout</button>
+            </form>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </nav>

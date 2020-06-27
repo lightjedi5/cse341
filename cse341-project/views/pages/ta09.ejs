@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="pokemon-holder">
+            <% for (pokemon of data) { %>
+                <div class="pokemon"><%= pokemon.name %></div>
+                <a href="<%=pokemon.url%>">See more info</a>
+            <% } %>
+        </div>
+        <div id="buttons">
+            <button>Next</button>
+            <button>Previous</button>
+        </div>
+    </div>
+</body>
+<style>
+    #buttons { display: flex; }
+    #main-container {
+        height: 500px;
+        width: 60%;
+        margin-left: 20%;
+        border: 1px solid black;
+    }
+</style>
+<script>
+    function loadPokemon() {
+       console.log("worked"); 
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>This is the placeholder for Creating new pages</p>
+  </div>
+</div>
+<div class="container">
+    <form action="ta10/insert" method="post">
+      <input type="text" name="name" id="name" value="">
+      <button type="submit">Add Avenger</button>  
+    </form>
+</div>
+<div>
+    <% for (avenger of data.avengers) { %>
+      <div><%=avenger.name%></div>
+    <% } %>
+</div>
+
+
+</body>
+</html>
