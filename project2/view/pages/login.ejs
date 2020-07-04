@@ -7,13 +7,13 @@
     <%- include('../includes/nav.ejs') %>
     <form action="/login" method="post">
         <div class="">
-            <label for="email">E-Mail</label>
+            <label for="username">Username</label>
             <input 
-                class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
-                type="email" 
-                name="email" 
-                id="email" 
-                value="<%= oldInput.email %>">
+                class="<%= validationErrors.find(e => e.param === 'username') ? 'invalid' : '' %>"
+                type="username" 
+                name="username" 
+                id="username" 
+                value="<%= oldInput.username %>">
         </div>
         <div class="">
             <label for="password">Password</label>
@@ -24,7 +24,6 @@
                 id="password" 
                 value="<%= oldInput.password %>">
         </div>
-        <!--<input type="hidden" name="_csrf" value="<%= csrfToken %>">-->
         <button class="btn" type="submit">Login</button>
     </form>
     <div class="">

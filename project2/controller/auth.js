@@ -2,7 +2,14 @@ const Player = require('../models/users')
 const router = require('../../Udemy/CourseWork/routes/admin')
 
 getLogin = (req, res, next) => {
-
+    res.render('pages/login', {
+        pageTitle: 'Login',
+        path: '/login',
+        oldInput: {
+            username: '',
+            password: ''
+        }
+    })
 }
 
 getSignup = (req, res, next) => {

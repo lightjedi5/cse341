@@ -9,9 +9,9 @@ const app = express();
 
 const PORT = process.env.PORT || 5000
 
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'view'))
     .set('view engine', 'ejs')
-    .use('/login', authRoutes)
+    .use('', authRoutes)
 
 mongooseConnect((client => {
     //console.log(client)
