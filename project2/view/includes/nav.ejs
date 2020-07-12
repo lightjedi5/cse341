@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
     <div class="container">
       <ul class="nav navbar-nav">
-        <li><a href="/" style="padding: 0 2rem; margin: 0"><img class="logo" src="/images/BYUI-logo.png" alt="BYU Idaho logo"></a></li>
+        <li><a href="/" style="padding: 0 2rem; margin: 0"><img class="logo" src="../../public/images/1200px-Tic_tac_toe.png" alt="1200px-Tic_tac_toe"></a></li>
         <li class="<%= path === '/' ? 'active' : ''%>">
           <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
         <li class="">
@@ -12,7 +12,6 @@
         </li>
         <li class="">
             <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button type="submit">Logout</button>
             </form>
         </li>

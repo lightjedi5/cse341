@@ -1,0 +1,32 @@
+<body>
+    <%- include('../includes/nav.ejs') %>
+ 
+     <main>
+         <form class="login-form" action="/signup" method="POST" >
+             <div class="form-control">
+                 <label for="username">Username</label>
+                 <input 
+                     type="username" 
+                     name="username" 
+                     id="username" 
+                     value="<%= oldInput.username %>">
+             </div>
+             <div class="form-control">
+                 <label for="password">Password</label>
+                 <input 
+                     type="password" 
+                     name="password" 
+                     id="password" 
+                     value="<%= oldInput.password %>">
+             </div>
+             <div class="form-control">
+                 <label for="confirmPassword">Confirm Password</label>
+                 <input 
+                     type="password" 
+                     name="confirmPassword" 
+                     id="confirmPassword" 
+                     value="<%= oldInput.confirmPassword %>">
+             </div>
+             <input type="submit" value="Signup">
+         </form>
+     </main>

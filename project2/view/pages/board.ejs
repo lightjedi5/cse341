@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/header.ejs') %>
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <style>
+        .box {
+            height: 30px;
+            width: 30px;
+            background-color: wheat;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .row{
+            display: flex;
+            width: 100px;
+            background-color: white;
+        }
+
+        .content{
+            background-color: violet;
+            margin-right: 50%;
+            margin-left: 50%;
+        }
+        .box:hover {
+            background-color: yellow;
+        }
+    </style>
+
+    <main>
+        <div class="content">
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div id="num" class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div id="num" class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    </main>
+    <script src="../../public/script.js">
+        </script>
+</body>
+</html>

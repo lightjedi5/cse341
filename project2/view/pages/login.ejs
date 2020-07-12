@@ -9,7 +9,6 @@
         <div class="">
             <label for="username">Username</label>
             <input 
-                class="<%= validationErrors.find(e => e.param === 'username') ? 'invalid' : '' %>"
                 type="username" 
                 name="username" 
                 id="username" 
@@ -18,7 +17,6 @@
         <div class="">
             <label for="password">Password</label>
             <input 
-                class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
                 type="password" 
                 name="password" 
                 id="password" 

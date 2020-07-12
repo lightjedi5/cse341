@@ -3,12 +3,12 @@ const express = require('express')
 //imports from within project
 const controller = require('../controller/auth')
 const Player = require('../models/users')
-const router = require('../../Udemy/CourseWork/routes/admin')
+const router = express.Router()
 
 
 router.get('/login', getLogin)
 router.get('/signup', getSignup)
-router.post('/login',postLogin)
+router.post('/login', postLogin)
 router.post('/signup',postSignup)
 router.post('/logout', postLogout);
 router.get('/reset', getReset);
