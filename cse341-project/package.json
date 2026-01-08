@@ -19,7 +19,7 @@
     "express-session": "^1.17.1",
     "express-validator": "^6.5.0",
     "mongodb": "^3.5.7",
-    "mongoose": "^5.9.14",
+    "mongoose": "^6.13.6",
     "node-fetch": "^2.6.0",
     "pug": "^3.0.3"
   },
