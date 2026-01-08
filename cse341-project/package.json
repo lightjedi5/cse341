@@ -21,7 +21,7 @@
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.14",
     "node-fetch": "^2.6.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.3",
